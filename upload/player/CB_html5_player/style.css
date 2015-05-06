@@ -134,7 +134,7 @@
 }
 .control div.hbtn {
 	float:left;
-	width:34px;
+	width:21px;
 	height:30px;
 	padding:0 5px;
 	border-right:0px solid #404040;
@@ -363,8 +363,8 @@ color: #fff;
 	height:4px;
 	float:left;
 	margin-top:16px;
-	margin-right:20px;
-	margin-left: 3px;
+	margin-right:10px;
+	margin-left: 10px;
 }
 .volumeBar{
 	display:block;
