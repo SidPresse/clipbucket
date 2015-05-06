@@ -66,6 +66,9 @@ if(!function_exists('html5_player'))
 			if($in['autoplay'] =='yes')
 			assign('autoplay','true');
 
+            if($in['loop'] =='yes')
+            assign('loop','true');
+
               
 			assign('vdata',$vdetails);
             assign('height',$in['height']);
