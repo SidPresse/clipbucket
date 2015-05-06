@@ -17,6 +17,7 @@
 include("../includes/config.inc.php"); 
  
 $vid = $_GET['vid'];
+$loop = $_GET['loop'];
 //gettin video details
 $vdetails = get_video_details($vid);
 
@@ -26,17 +27,17 @@ $autoplay = @$_GET['autoplay'];
 
 
 if(!$width)
-	$width = '320';
-	
+    $width = '320';
+    
 if(!$height)
-	$height = '240';
+    $height = '240';
 
 if(!$autoplay)
-	$autoplay = 'no';
+    $autoplay = 'no';
 
 
 if(!$vdetails)
-	exit(json_encode(array("err"=>"no video details found")));
+    exit(json_encode(array("err"=>"no video details found")));
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -48,6 +49,16 @@ if(!$vdetails)
 Template(STYLES_DIR.'/global/head.html',false);
 Template(STYLES_DIR.'/global/html5_player_header.html',false);
 ?>
+<!-- begin lep adding 
+- subtitle in left top corner hide
+- logo CB hide
+-->
+<style>
+div.caption span.user, div#path{
+        display:none;
+}
+</style>
+<!-- end lep adding -->
 </head>
 
 <body style="margin:0px; padding:0px">
@@ -56,3 +67,4 @@ flashPlayer(array('vdetails'=>$vdetails,'width'=>$width,'height'=>$height,'autop
 ?>
 </body>
 </html>
+
