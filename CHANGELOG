@@ -1,0 +1,102 @@
+Revision: 3006
+Author: fahad-cb
+Date: Saturday, April 18, 2015 2:13:44 AM
+Message:
+modified : revision updated && code uncmommented 
+----
+Modified : /trunk/upload/cb_install/clipbucket.php
+Modified : /trunk/upload/player/CB_html5_player/html5_player.js
+
+Revision: 3005
+Author: fahad-cb
+Date: Friday, April 17, 2015 6:49:45 PM
+Message:
+modified : revision updated to 3005 and version to 2.7.1
+----
+Modified : /trunk/upload/cb_install/clipbucket.php
+Modified : /trunk/upload/cb_install/upgradeable.php
+
+Revision: 3004
+Author: fahad-cb
+Date: Friday, April 17, 2015 6:30:19 PM
+Message:
+modified : error reporting off all
+
+----
+Modified : /trunk/upload/includes/common.php
+
+Revision: 3003
+Author: fahad-cb
+Date: Friday, April 17, 2015 6:27:06 PM
+Message:
+modified : error reporting off all
+----
+Modified : /trunk/upload/includes/common.php
+
+Revision: 3002
+Author: fahad-cb
+Date: Friday, April 17, 2015 6:22:49 PM
+Message:
+modified : bugs fixed 
+----
+Modified : /trunk/upload/admin_area/styles/cb_2014/layout/language_settings.html
+Modified : /trunk/upload/admin_area/styles/cb_2014/layout/manage_players.html
+Modified : /trunk/upload/includes/classes/video.class.php
+Modified : /trunk/upload/myaccount.php
+Modified : /trunk/upload/player/CB_html5_player/html5_player.js
+Modified : /trunk/upload/styles/cb_27/layout/blocks/manage/account_video.html
+Modified : /trunk/upload/styles/cb_27/layout/watch_video.html
+
+Revision: 3001
+Author: fahad-cb
+Date: Thursday, April 16, 2015 3:26:18 PM
+Message:
+modified : bugs  fixed 
+----
+Modified : /trunk/upload/player/CB_html5_player/html5_player.js
+Modified : /trunk/upload/admin_area/main.php
+Modified : /trunk/upload/admin_area/styles/cb_2014/layout/body.html
+Modified : /trunk/upload/admin_area/styles/cb_2014/layout/main.html
+Modified : /trunk/upload/ajax.php
+Modified : /trunk/upload/cb_install/sql/configs.sql
+Modified : /trunk/upload/styles/cb_27/layout/blocks/pagination.html
+Modified : /trunk/upload/styles/cb_27/layout/index.html
+
+Revision: 3000
+Author: fahad-cb
+Date: Wednesday, April 15, 2015 7:14:36 PM
+Message:
+modified: bugs fixed 
+----
+Modified : /trunk/upload/player/CB_html5_player/html5_player.js
+Modified : /trunk/upload/styles/cb_27/layout/index.html
+Modified : /trunk/upload/styles/cb_27/layout/blocks/category_list.html
+
+Revision: 2999
+Author: fahad-cb
+Date: Wednesday, April 15, 2015 6:21:13 PM
+Message:
+modified : player controls + caption hover issue  resolved 
+----
+Modified : /trunk/upload/player/CB_html5_player/html5_player.js
+
+Revision: 2998
+Author: fahad-cb
+Date: Wednesday, April 15, 2015 1:11:04 PM
+Message:
+modified : category thumb size issue fixed admin_area
+----
+Modified : /trunk/upload/admin_area/styles/cb_2014/layout/category.html
+Modified : /trunk/upload/admin_area/styles/cb_2014/layout/collection_category.html
+Modified : /trunk/upload/admin_area/styles/cb_2014/layout/group_category.html
+Modified : /trunk/upload/admin_area/styles/cb_2014/layout/user_category.html
+Modified : /trunk/upload/player/CB_html5_player/html5_player.html
+
+Revision: 2997
+Author: fahad-cb
+Date: Thursday, March 12, 2015 3:18:11 PM
+Message:
+modified : curl request fixed for multiserver
+----
+Modified : /trunk/upload/actions/file_uploader.php
+

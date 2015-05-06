@@ -1,0 +1,121 @@
+.navig-resp-bg, .search-resp-bg{ 
+    background: url('../../images/u-sprite.png') no-repeat;
+}
+.navig-resp-bg, .search-resp-bg{
+    width: 42px;
+    height: 33px;
+    display: block;
+}
+.navig-resp-bg{
+  float: right; 
+  background-position: 0px 0px; border: none;
+  margin-right: 10px;
+}
+
+.search-resp-bg{
+    background-position: 0px -33px;
+    position: absolute;
+    top: 0px;
+    right:70px;
+    z-index: 2;
+    width: 42px;
+    height: 33px;
+    border: none;
+}
+.navig-resp-bg:hover{ 
+    background-position:-43px 0px;
+}
+.search-resp-bg:hover{
+    background-position: -43px -33px;
+}
+
+.input-group-btn > .search-drop-btn{
+  margin-left: -4px !important;
+}
+
+/* .fix-md-searchinput{
+  position: absolute;
+  right:0%;
+  transition: opacity 0.15s linear 0s;
+} */
+.fix-md-user-icon{
+  position: absolute !important;
+  top:0px;
+  right:1%;
+}
+
+.left-margin-xero{ margin-left: 0px !important;}
+
+.mrxll{ margin-right: 5px;}
+.form-small{
+  position: absolute;
+  right:0%;
+  top: -50px;
+  -webkit-transition:top 1s ease-in-out;
+  -moz-transition:top 1s ease-in-out;
+  -o-transition: top 1s ease-in-out;
+  transition:top 1s ease-in-out;
+  z-index: -1;
+  opacity: 0;
+}
+.form-small.show{
+  top: 48px;
+  opacity: 1;
+
+}
+
+
+.upload-vid-photo-icon {
+    background-image: url("../../images/h-upload-icon.png");
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 6px 0px 6px 30px;
+}
+.premium-icon {
+    color: #d4aa0d !important;
+}
+.upload-dropdown{
+  min-width:140px;
+  left: -70px;
+}
+
+.upload-dropdown-btn-d{
+  position: absolute;
+  top:0;
+  right: 114px;
+}
+.upload-btn-pad{ padding:3px 5px !important; }
+.navbar-collapse.manual-height{
+  max-height: 100%;
+}
+
+.pad-left-xero{padding-left: 0px!important;}
+
+
+@media (min-width: 768px) and (max-width:4000px) {
+.navig-resp-bg, .search-resp-bg{
+    display:none;
+}
+}
+@media (min-width: 768px) and (max-width:900px) {
+.upload-vid-photo-icon {
+    background-image: url("../../images/h-upload-icon.png");
+    background-repeat: no-repeat;
+    background-size: 16px auto;
+    color: #fff;
+    display: block;
+    padding: 0 0 0 17px;
+    text-indent: -99999px;
+}
+.upload-dropdown-btn-d{
+  position: absolute;
+  top:1px;
+  right:108px;
+}
+.mrxll{ margin-right:0px;}
+}
+@media (min-width: 768px) and (max-width:786px) {
+.navbar-nav > li > a{ 
+    padding:15px 10px; 
+}
+}
