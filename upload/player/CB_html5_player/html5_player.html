@@ -50,7 +50,7 @@ jwplayer("mediaplayer").setup( {ldelim}
    </video>
 
 
-  <div class="caption">
+  <div class="caption" style="display:none">
       <span class="title">{if !$vdata.title} Pas de vidéo {else}{$vdata.title|truncate:30} {/if}</span><br>
       <span class="user">Fournie par {if !$vdata.username} Anonyme {else} {$vdata.username} {/if}  </span>
   </div>
@@ -93,7 +93,7 @@ jwplayer("mediaplayer").setup( {ldelim}
   </div>
   {/if}
 
-  <div class="control">
+  <div class="control" style="display:none">
     <div class="topControl">
       <div class="">
         <div class="progress">

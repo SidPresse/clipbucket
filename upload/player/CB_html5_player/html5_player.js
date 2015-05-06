@@ -23,6 +23,13 @@ $(document).ready(function()
 
             if (rdy >= '2')
             {
+
+                // responsive controls
+                if($('div.cont').width()< 300){
+                        $('div.btmControl div.sound.sound2.hbtn').hide();
+                        $('div.btmControl div.time').hide();
+                }
+
                 caption_hide();
                 if(video.attr('autoplay')=='autoplay'){
                     $('.init').hide();
@@ -729,8 +736,8 @@ function toggleFullScreen (e) {
 */
 function caption_hide()
 {
-    $('.control').stop().animate({'bottom':-51}, 500);
-    $('.caption').stop().animate({'top':-200}, 500);
+        $('.control').stop().hide().animate({'bottom':-51}, 500);
+        $('.caption').stop().hide().animate({'top':-200}, 500);
 }
 
 
@@ -739,9 +746,10 @@ function caption_hide()
 */
 function caption_show()
 {
-    $('.control').stop().animate({'bottom':0}, 100);
-    $('.caption').stop().animate({'top':-7}, 100);
+        $('.control').stop().show().animate({'bottom':0}, 100);
+        $('.caption').stop().show().animate({'top':-7}, 100);
 }
+
 
 
 /******CAUTION*****\
