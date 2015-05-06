@@ -31,6 +31,9 @@ function flashPlayer($param)
     if(!$param['autoplay'])
         $param['autoplay'] = config('autoplay_video');
 
+    if(!$param['loop'])
+        $param['loop'] = 'no';
+
     assign('player_params',$param);
 
 

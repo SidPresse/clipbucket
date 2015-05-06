@@ -17,14 +17,13 @@
 include("../includes/config.inc.php"); 
  
 $vid = $_GET['vid'];
-$loop = $_GET['loop'];
 //gettin video details
 $vdetails = get_video_details($vid);
 
 $width = @$_GET['width'];
 $height = @$_GET['height'];
 $autoplay = @$_GET['autoplay'];
-
+$loop = @$_GET['loop']; 
 
 if(!$width)
     $width = '320';
@@ -34,6 +33,9 @@ if(!$height)
 
 if(!$autoplay)
     $autoplay = 'no';
+
+if(!$loop)
+    $loop = 'no';
 
 
 if(!$vdetails)
@@ -63,7 +65,7 @@ div.caption span.user, div#path{
 
 <body style="margin:0px; padding:0px">
 <?php
-flashPlayer(array('vdetails'=>$vdetails,'width'=>$width,'height'=>$height,'autoplay'=>$autoplay));
+flashPlayer(array('vdetails'=>$vdetails,'width'=>$width,'height'=>$height,'autoplay'=>$autoplay, ,'loop'=>$loop));
 ?>
 </body>
 </html>
