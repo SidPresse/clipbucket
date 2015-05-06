@@ -34,6 +34,18 @@ function flashPlayer($param)
     if(!$param['loop'])
         $param['loop'] = 'no';
 
+    // translate param for flashplayer
+    if($param['autoplay']=='yes'){
+        $param['autoplay']='true';
+    } else {
+        $param['autoplay']='false';
+    }
+    if($param['loop']=='yes'){
+        $param['loop']='true';
+    } else {
+        $param['loop']='false';
+    }
+
     assign('player_params',$param);
 
 
