@@ -58,7 +58,7 @@ jwplayer("mediaplayer").setup( {ldelim}
 <div class="cont" id="cont" style="height:{$height};width:{$width};">
 {ANCHOR place='overlay_ads'}
 
-   <video id="myVideo" class="myVideo largevid" {if $autoplay==true}autoplay{else}{/if} {if $loop==true}loop{else}{/if}>
+   <video id="myVideo" class="myVideo largevid" {if $player_data.autoplay==true}autoplay{else}{/if} {if $player_data.loop==true}loop{else}{/if}>
      
      {if $ms_videos}
      <source src="{$ms_videos.360}" type="video/mp4" data-res="" id=""/>
