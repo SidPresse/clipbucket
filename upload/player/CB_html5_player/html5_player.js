@@ -23,6 +23,7 @@ $(document).ready(function()
 
             if (rdy >= '2')
             {
+                caption_hide();
                 if (loadmetadata == true)
                 {
                         $('.loading').fadeOut(500);
@@ -35,7 +36,7 @@ $(document).ready(function()
                             setTimeout(startBuffer, 10);
                             $('.btnPlay').addClass('paused');
                         }
-                        $('.caption').fadeIn(500);
+                        // $('.caption').fadeIn(500);
                         $('.fduration').text(timeFormat(video[0].duration));
                         $('.fcurrent').text(timeFormat(0));
                         updateVolume(0, 0.7);
