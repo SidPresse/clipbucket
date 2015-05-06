@@ -24,6 +24,9 @@ $(document).ready(function()
             if (rdy >= '2')
             {
                 caption_hide();
+                if(video.attr('autoplay')=='autoplay'){
+                    $('.init').hide();
+                }
                 if (loadmetadata == true)
                 {
                         $('.loading').fadeOut(500);
