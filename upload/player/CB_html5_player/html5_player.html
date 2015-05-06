@@ -20,34 +20,8 @@ jwplayer("mediaplayer").setup( {ldelim}
     height: '{$height}',
     width: '{$width}',
     autostart : '{$player_data.autoplay}',
-    repeat : '{$player_data.loop}',
+    repeat : '{if $player_data.loop==true}true{else}{/if}'
 
-    <!-- Setting Plugins -->
-    'plugins':
-    {ldelim}
-      
-      <!-- Loading HQ Plugin -->
-      'hd-2':
-      {ldelim}
-        'file': '{$hq_vid_file}'
-      {rdelim},
-      <!-- End Loading HQ Plugin -->
-
-
-      <!-- Loading Related Plugin -->
-      '{$html5_player_url}/plugins/related/related.swf':
-      
-      {ldelim}
-              file: '{$html5_player_url}/plugins/related/related_videos.php'+
-        '?vid={$vdo.videoid}&title={$vdo.title|urlencode}&tags={$vdo.tags|urlencode}',
-        usedock :false,
-        heading :'Plus de vidéos'
-          {rdelim}
-      <!-- End Loading Related plugin -->
-      
-
-    {rdelim}
-    
  {rdelim} );
 
 </script>
