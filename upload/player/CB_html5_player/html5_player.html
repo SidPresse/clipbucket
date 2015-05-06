@@ -40,7 +40,7 @@ jwplayer("mediaplayer").setup( {ldelim}
               file: '{$html5_player_url}/plugins/related/related_videos.php'+
         '?vid={$vdo.videoid}&title={$vdo.title|urlencode}&tags={$vdo.tags|urlencode}',
         usedock :false,
-        heading :'More suggested videos'
+        heading :'Plus de vidéos'
           {rdelim}
       <!-- End Loading Related plugin -->
       
@@ -70,25 +70,26 @@ jwplayer("mediaplayer").setup( {ldelim}
      {else}
      {/if}   
      
-     <p>Your browser does not support the video tag.</p>
+     <p>Votre navigateur ne supporte pas le tag vidéo.</p>
 
    </video>
 
 
   <div class="caption">
-      <span class="title">{if !$vdata.title} No Video Found {else}{$vdata.title|truncate:30} {/if}</span><br>
-      <span class="user">Uploaded By {if !$vdata.username} Anonymous {else} {$vdata.username} {/if}  </span>
+      <span class="title">{if !$vdata.title} Pas de vidéo {else}{$vdata.title|truncate:30} {/if}</span><br>
+      <span class="user">Fournie par {if !$vdata.username} Anonyme {else} {$vdata.username} {/if}  </span>
   </div>
 
 
   <div class="init"></div>
   
-  <div id="opacity">
-    <div id="cancel_v"></div>
-    <div id="replay_v"></div>
+  <div id="opacity" style="padding: 30% 10%;" >
+    <div id="cancel_v" style="cursor:pointer;display:none;"></div>
+    <div id="replay_v" style="cursor:pointer"></div>
+    <h4 style="padding: 0 10px;">Rejouer la vidéo</h4>
   </div>
-  <div id="related_1" >
-    <h4 id="h_4">Related Videos</h4>
+<!--  <div id="related_1" style="display: none;">
+    <h4 id="h_4">Vidéos associées</h4>
     {$id=$vdata.videoid}
     {$title=$vdata.title}
     {$tags=$vdata.tags}
@@ -101,9 +102,9 @@ jwplayer("mediaplayer").setup( {ldelim}
         </a>
       {/foreach}
     {else}
-      <p>No Related Videos</p>
+      <p>Pas de vidéos associées</p>
     {/if}
-  </div>
+  </div>-->
 
   {if $ms_videos}
   <div id="files" class="video_files hbtn" title="files">
@@ -129,21 +130,21 @@ jwplayer("mediaplayer").setup( {ldelim}
 
     
     <div class="btmControl">
-      <div class="btnPlay hbtn" title="Play/Pause video"></div>
-      <div class="sound sound2 hbtn" title="Mute/Unmute sound"></div>
-      <div class="volume" title="Set volume">
+      <div class="btnPlay hbtn" title="Lecture/Pause"></div>
+      <div class="sound sound2 hbtn" title="Activer/Désactiver le son"></div>
+      <div class="volume" title="Volume">
         <span class="volumeBar"></span>
       </div>
       <div class="time">
         <span class="fcurrent">00:00</span> / 
         <span class="fduration">00:00</span>
       </div>
-      <div class="btnFS enterbtnFs hbtn" id="fs" title="Switch to full screen"></div>
+      <div class="btnFS enterbtnFs hbtn" id="fs" title="Plein écran"></div>
       {if $HQ }
-        <div id="hd" class="hdoff hdon hbtn" title="HD On/Off"></div>
+        <div id="hd" class="hdoff hdon hbtn" title="HD Active/Inactive"></div>
       {/if}
       {if $ms_videos}
-        <div id="res" class="res ress hbtn" title="Resolution Selector"></div>
+        <div id="res" class="res ress hbtn" title="Sélection de résolution"></div>
       {/if}
     </div>
   </div>
