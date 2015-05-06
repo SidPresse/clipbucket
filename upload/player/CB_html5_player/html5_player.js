@@ -33,6 +33,8 @@ $(document).ready(function()
                 caption_hide();
                 if(video.attr('autoplay')=='autoplay'){
                     $('.init').hide();
+                } else {
+                    $('.btnPlay').removeClass('paused');
                 }
                 if (loadmetadata == true)
                 {
