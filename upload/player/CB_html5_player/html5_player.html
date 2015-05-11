@@ -56,8 +56,143 @@ jwplayer("mediaplayer").setup( {ldelim}
   </div>
 
 
+
+
+<!--     background-image: url(http://dam.eilep.com/files/thumbs/2015/05/11/143133377726180-5.jpg);
+    background-size: contain;
+
+    {assign var=vidthumbs value=get_thumb($data,1,TRUE,FALSE,TRUE,FALSE)}
+    <ul class="ace-thumbnails">
+    {foreach from=$vidthumbs item=vid_thumb}
+        <li style="display: inline">
+            <img src="{$vid_thumb}" width="100" height="100">
+            <div class="tools">
+                <input type="radio" value="{GetName($vid_thumb)}.{GetExt($vid_thumb)}" id="{$vid_thumb|getname}" name="default_thumb" {if $data.default_thumb==$vid_thumb|get_thumb_num} checked="checked"{/if} />
+                {if $vid_thumb|getname!='processing'}
+                <a href="?video={$data.videoid}&delete={$vid_thumb|getname}.{$vid_thumb|getext}">
+                    <i class="icon-remove red"></i></a>
+                {/if}
+            </div>
+        </li>
+    {/foreach} 
+
+Array
+(
+    [videoid] => 1020
+    [videokey] => HB15AKWW5818
+    [video_password] => 
+    [video_users] =>  
+    [username] => eilep
+    [userid] => 5
+    [title] => Recrutement OCA
+    [flv] => 
+    [file_name] => 143133377726180
+    [file_directory] => 2015/05/11
+    [description] => Ouest conseils - Recrutement OCA
+    [tags] => no-tag
+    [category] => #12# #27# 
+    [category_parents] => 
+    [broadcast] => public
+    [location] => 
+    [datecreated] => 2015-05-11
+    [country] => 0
+    [allow_embedding] => yes
+    [rating] => 0
+    [rated_by] => 0
+    [voter_ids] => 
+    [allow_comments] => yes
+    [comment_voting] => yes
+    [comments_count] => 0
+    [last_commented] => 0000-00-00 00:00:00
+    [featured] => No
+    [featured_date] => 0000-00-00 00:00:00
+    [featured_description] => 
+    [allow_rating] => yes
+    [active] => yes
+    [favourite_count] => 0
+    [playlist_count] => 0
+    [views] => 1
+    [last_viewed] => 2015-05-11 08:58:37
+    [date_added] => 2015-05-11 08:42:58
+    [flagged] => no
+    [duration] => 200.54
+    [status] => Successful
+    [failed_reason] => 
+    [flv_file_url] => 
+    [default_thumb] => 5
+    [aspect_ratio] => 
+    [embed_code] => 
+    [refer_url] => 
+    [downloads] => 0
+    [uploader_ip] => 195.219.49.84
+    [mass_embed_status] => no
+    [is_hd] => no
+    [unique_embed_code] => 
+    [remote_play_url] => 
+    [server_ip] => 
+    [file_server_path] => 
+    [files_thumbs_path] => 
+    [file_thumbs_count] => 
+    [has_hq] => no
+    [has_mobile] => no
+    [filegrp_size] => 
+    [process_status] => 0
+    [has_hd] => no
+    [video_version] => 2.7
+    [extras] => 
+    [email] => lionel.fenneteau@gmail.com
+    [avatar] => 
+    [sex] => male
+    [avatar_url] => 
+    [dob] => 1989-10-14
+    [level] => 1
+    [usr_status] => Ok
+    [user_session_key] => f49608c00579b46b598c660877cbb5d0
+    [ban_status] => no
+    [total_photos] => 0
+    [profile_hits] => 3
+    [total_videos] => 52
+    [subscribers] => 0
+    [total_subscriptions] => 0
+)
+
+    -->
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
   <div class="init"></div>
   
+
+  <div class="cover" style="display: block; background-image: url({$about}/files/thumbs/{$vdata['file_directory']}/{$vdata['file_name']}-{$vdata['default_thumb']}.jpg);background-size: cover;z-index: 3;position: absolute;   top: 0;   left: 0;   width: 100%;   height: 100%;"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div id="opacity" style="padding: 30% 10%;" >
     <div id="cancel_v" style="cursor:pointer;display:none;"></div>
     <div id="replay_v" style="cursor:pointer"></div>

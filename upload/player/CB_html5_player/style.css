@@ -38,7 +38,7 @@
 	color:#ccc;
 	display: block;
 	z-index: 1;
-
+	font-family: sans-serif;
 	
 	
 }
@@ -47,7 +47,6 @@
 
 	font-size: 20px;
 	color: #fff;
-	font-family: Tahoma;
 }
 	
 .user{
@@ -67,7 +66,7 @@
 	padding:10px;
 	font-size:15px;
 	height: 80%;
-	z-index: 2;
+	z-index: 5;
 	background:url(skin/caption.png)  repeat-x;
 	
 }
@@ -345,7 +344,7 @@ background: #fff;
 .time{
 color: #fff;
 	margin-top: 11px;
-	width:12%;
+	width:80px;
 	float:left;
 	text-align:center;
 	font-size:11px;

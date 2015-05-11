@@ -33,6 +33,7 @@ $(document).ready(function()
                 caption_hide();
                 if(video.attr('autoplay')=='autoplay'){
                     $('.init').hide();
+                    $('.cover').hide();
                 } else {
                     $('.btnPlay').removeClass('paused');
                 }
@@ -41,6 +42,7 @@ $(document).ready(function()
                         $('.loading').fadeOut(500);
                         if( autoplay == '' ){
                             $('.init').fadeIn(2500);
+                            $('.cover').fadeIn(2500);
                             $('.btnPlay').addClass('paused');
                             
                         }
@@ -83,11 +85,13 @@ $(document).ready(function()
 
         if(time_var  == true){
             $('.init').hide();
+            $('.cover').hide();
         }   
         else{
 
             if( autoplay == '' && !_HD_flag){
                 $('.init').fadeIn(2500);
+                $('.cover').fadeIn(2500);
                 $('.btnPlay').addClass('paused');
             }
         }    
@@ -99,6 +103,7 @@ $(document).ready(function()
         if( autoplay == '')
         {
             $('.init').hide();
+            $('.cover').hide();
             $('.btnPlay').addClass('paused');
             $(this).unbind('click');
             video[0].play();
@@ -208,6 +213,7 @@ $(document).ready(function()
     var playpause = function() {
         if(video[0].paused || video[0].ended) {
             $('.init').hide();
+            $('.cover').hide();
             $('.btnPlay').addClass('paused');
             video[0].play();
             _pause = false;
@@ -215,7 +221,7 @@ $(document).ready(function()
         }
         else {
 
-             $('.init').show();
+            $('.init').show();
             $('.btnPlay').removeClass('paused');
             video[0].pause();
             _pause = true;
@@ -238,6 +244,7 @@ $(document).ready(function()
         $('.control').show();
         $('.caption').show();
         $('.init').show();
+        $('.cover').show();
         $('#web').show();
      });
 
