@@ -1225,9 +1225,7 @@ class CBvideo extends CBCategory
 		if($type=='iframe')
 		{
 			$embed_code = '<iframe width="'.config('embed_player_width').'" height="'.config('embed_player_height').'" ';
-			$embed_code .= 'src="'.BASEURL.'/player/embed_player.php?vid='.$vdetails['videoid'].'&width='.
-			config('embed_player_width').'&height='.config('embed_player_height').
-			'&autoplay='.config('autoplay_embed').'&loop=no" frameborder="0" allowfullscreen></iframe>';
+			$embed_code .= 'src="'.BASEURL.'/player/embed_player.php?vid='.$vdetails['videoid'].'&width=100%&height=100%&autoplay='.config('autoplay_embed').'&loop=no" frameborder="0" allowfullscreen></iframe>';
 		}
 		
 		if(!$embed_code)
