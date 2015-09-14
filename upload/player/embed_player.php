@@ -59,6 +59,9 @@ Template(STYLES_DIR.'/global/html5_player_header.html',false);
 div.caption span.user, div#path{
         display:none;
 }
+div.btnFS.enterbtnFs.hbtn {
+        display:none;
+}
 </style>
 <!-- end lep adding -->
 </head>
