@@ -22,11 +22,29 @@ $vdo = get_video_files($vdetails,false,true,false,false,true);
 $return = array();
 
 $return['urlVideos']= $vdo;
-$return['urlDefaulThumb']= get_thumb($vdetails);   
-$return['urlThumbs']= get_thumb($vdetails, 'default', true);      
+$return['urlDefaulThumb']= get_thumb($vdetails);
+$return['urlThumbs']= get_thumb($vdetails, 'default', true);
 $return['details']=$vdetails;
 
-//echo BASEURL."/files/thumbs/{$vdetails['file_directory']}/{$vdetails['file_name']}-{$vdetails['default_thumb']}.jpg";
-//echo "<pre>";
+$command = 'mediainfo -f --Output=JSON '. __DIR__.'/files/videos/'.$vdetails['file_directory'].'/'.basename($vdo['0']);
+exec($command,$output);
+$infoReturn = array();
+foreach($output as $line){
+        $key=trim(substr($line,0,strpos($line,':')));
+        $value=trim(substr($line,strpos($line,':')+1));
+        $key = keyRename($key,$infoReturn);
+        $infoReturn[$key]=$value;
+}
+
+$return['mediainfo']=$infoReturn;
+
 echo json_encode($return);
-//echo "</pre>";
+
+function keyRename($key,$array){
+        if (array_key_exists($key, $array)) {
+                //      return $key.'_1';
+                return keyRename($key.'-',$array);
+        } else {
+                return $key;
+        }
+}
